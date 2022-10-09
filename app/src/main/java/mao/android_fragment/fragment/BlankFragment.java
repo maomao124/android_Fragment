@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import mao.android_fragment.R;
 public class BlankFragment extends Fragment
 {
 
+    private static final String TAG = "BlankFragment";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
@@ -24,6 +27,7 @@ public class BlankFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_static, container, false);
         TextView tv_adv = view.findViewById(R.id.tv_adv);
         ImageView iv_adv = view.findViewById(R.id.iv_adv);
+        Log.d(TAG, "onCreateView: ");
         tv_adv.setOnClickListener(new View.OnClickListener()
         {
             @Override
